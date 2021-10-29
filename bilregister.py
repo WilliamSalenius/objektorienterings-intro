@@ -24,12 +24,30 @@ class Car():
         så tilldelas aktuellt objekt märket enligt parametern.
         '''
         self.brand = new_brand
+    
+    def set_color(self, new_color):
+        self.color = new_color
+
+    def set_mileage(self, new_mileage):
+        self.mileage = new_mileage
+
+    def get_mileage(self):
+        print(self.mileage)
 
 
 # ----------Huvudprogram----------
 # Nu när klassen finns kan vi skapa objekt (variabler) med denna typ.
 # Dessa objekt har också tillgång till klassens metoder (funktioner).
+
 a_car = Car('Volvo', 'Blå', 1587)
-a_car.get_brand()
-a_car.set_brand('Renault')
-a_car.get_brand()
+
+b_car = Car('Ferrari', 'Röd', 2021)
+
+c_car = Car('BMW', 'Svart', 1867)
+
+d_car = Car('Audi', 'Vit', 3156)
+
+my_cars = [a_car, b_car, c_car, d_car]
+
+for car in my_cars:
+    car.get_brand()
